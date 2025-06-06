@@ -9,7 +9,7 @@
 
 **Goal:**  
 Enable interactive and physically accurate visualization of Brazilian Jiu Jitsu positions and transitions, using real data from GrappleMap, by building articulated ragdoll models in MuJoCo.
-
+  
 ## Functional Requirements
 
 1. **GrappleMap Integration:**

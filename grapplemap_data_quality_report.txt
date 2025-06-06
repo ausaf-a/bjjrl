@@ -1,0 +1,102 @@
+Loaded 601 positions
+
+================================================================================
+LIMB LENGTH VARIATION ANALYSIS
+================================================================================
+Analyzing limb lengths across 50 positions...
+
+1. OVERALL LIMB LENGTH STATISTICS
+--------------------------------------------------
+Limb            P1 Mean    P1 Std     P2 Mean    P2 Std     P1-P2 Diff  
+--------------------------------------------------------------------------------
+LeftFoot        0.9178     0.0082     0.9189     0.0083     0.0071      
+LeftAnkle       0.3601     0.0084     0.3586     0.0071     0.0087      
+LeftShin        1.7085     0.0167     1.7083     0.0163     0.0076      
+LeftThigh       1.7311     0.0188     1.7308     0.0161     0.0063      
+RightFoot       0.9194     0.0085     0.9194     0.0089     0.0114      
+RightAnkle      0.3602     0.0079     0.3575     0.0128     0.0108      
+RightShin       1.7089     0.0167     1.7108     0.0234     0.0102      
+RightThigh      1.7325     0.0189     1.7321     0.0172     0.0082      
+LeftArm         1.1623     0.0075     1.1603     0.0092     0.0090      
+LeftForearm     1.0454     0.0165     1.0454     0.0152     0.0109      
+LeftHand        0.3209     0.0065     0.3220     0.0073     0.0063      
+LeftFingers     0.3207     0.0082     0.3210     0.0083     0.0087      
+RightArm        1.1609     0.0076     1.1612     0.0076     0.0088      
+RightForearm    1.0753     0.0139     1.0718     0.0151     0.0094      
+RightHand       0.3209     0.0078     0.3224     0.0066     0.0069      
+RightFingers    0.3222     0.0075     0.3206     0.0081     0.0096      
+Core            1.5135     0.0866     1.5488     0.0791     0.0954      
+Neck            0.6617     0.0082     0.6609     0.0073     0.0092      
+
+2. PLAYER DIFFERENCES (P1 vs P2 in same positions)
+------------------------------------------------------------
+LeftFoot        Mean diff: 0.0071, Max diff: 0.0220
+LeftAnkle       Mean diff: 0.0087, Max diff: 0.0227
+LeftShin        Mean diff: 0.0076, Max diff: 0.0328
+LeftThigh       Mean diff: 0.0063, Max diff: 0.0197
+RightFoot       Mean diff: 0.0114, Max diff: 0.0437
+RightAnkle      Mean diff: 0.0108, Max diff: 0.0664
+RightShin       Mean diff: 0.0102, Max diff: 0.1041
+RightThigh      Mean diff: 0.0082, Max diff: 0.0245
+LeftArm         Mean diff: 0.0090, Max diff: 0.0417
+LeftForearm     Mean diff: 0.0109, Max diff: 0.0544
+LeftHand        Mean diff: 0.0063, Max diff: 0.0181
+LeftFingers     Mean diff: 0.0087, Max diff: 0.0217
+RightArm        Mean diff: 0.0088, Max diff: 0.0226
+RightForearm    Mean diff: 0.0094, Max diff: 0.0539
+RightHand       Mean diff: 0.0069, Max diff: 0.0237
+RightFingers    Mean diff: 0.0096, Max diff: 0.0227
+Core            Mean diff: 0.0954, Max diff: 0.2987
+Neck            Mean diff: 0.0092, Max diff: 0.0221
+
+Largest player differences in: Core (avg 0.0954)
+
+3. BILATERAL SYMMETRY (Left vs Right limbs)
+------------------------------------------------------------
+LeftThigh    vs RightThigh  : P1 asymmetry: 0.0076, P2 asymmetry: 0.0065
+LeftShin     vs RightShin   : P1 asymmetry: 0.0072, P2 asymmetry: 0.0103
+LeftArm      vs RightArm    : P1 asymmetry: 0.0073, P2 asymmetry: 0.0090
+LeftForearm  vs RightForearm: P1 asymmetry: 0.0381, P2 asymmetry: 0.0353
+LeftFoot     vs RightFoot   : P1 asymmetry: 0.0096, P2 asymmetry: 0.0093
+
+4. POSITIONAL VARIATION (same player across positions)
+------------------------------------------------------------
+LeftFoot        P1 CV: 0.89%, P2 CV: 0.90%
+LeftAnkle       P1 CV: 2.33%, P2 CV: 1.97%
+LeftShin        P1 CV: 0.98%, P2 CV: 0.95%
+LeftThigh       P1 CV: 1.09%, P2 CV: 0.93%
+RightFoot       P1 CV: 0.92%, P2 CV: 0.97%
+RightAnkle      P1 CV: 2.19%, P2 CV: 3.59%
+RightShin       P1 CV: 0.98%, P2 CV: 1.37%
+RightThigh      P1 CV: 1.09%, P2 CV: 0.99%
+LeftArm         P1 CV: 0.65%, P2 CV: 0.79%
+LeftForearm     P1 CV: 1.58%, P2 CV: 1.46%
+LeftHand        P1 CV: 2.01%, P2 CV: 2.28%
+LeftFingers     P1 CV: 2.54%, P2 CV: 2.58%
+RightArm        P1 CV: 0.66%, P2 CV: 0.66%
+RightForearm    P1 CV: 1.29%, P2 CV: 1.41%
+RightHand       P1 CV: 2.43%, P2 CV: 2.05%
+RightFingers    P1 CV: 2.34%, P2 CV: 2.52%
+Core            P1 CV: 5.72%, P2 CV: 5.11%
+Neck            P1 CV: 1.24%, P2 CV: 1.10%
+
+Most variable limb: Core (CV: 5.41%)
+
+5. OUTLIER DETECTION (positions with unusual limb lengths)
+----------------------------------------------------------------------
+pos_33: P2 LeftShin = 1.6673 (z=2.51)
+pos_44: P2 RightShin = 1.8159 (z=4.49)
+
+Total positions with outlier limb lengths: 2
+
+6. SUMMARY & DATA QUALITY ASSESSMENT
+------------------------------------------------------------
+Average coefficient of variation: 1.74%
+Average player difference: 0.0136
+Average bilateral asymmetry: 0.0140
+Outlier positions: 2 out of 50 (4.0%)
+
+CONCLUSIONS:
+- LOW variation in limb lengths - data appears consistent
+- LOW bilateral asymmetry - good left/right consistency
+- FEW outliers detected - data quality appears reasonable
