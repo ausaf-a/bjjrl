@@ -1,0 +1,391 @@
+<mujoco model="Humanoid">
+  <option timestep="0.0050000000000000001"/>
+  <visual>
+    <global azimuth="120" elevation="-20" offwidth="2560" offheight="1440"/>
+    <map force="0.10000000000000001" zfar="30"/>
+    <rgba haze="0.14999999999999999 0.25 0.34999999999999998 1"/>
+  </visual>
+  <statistic center="0 0 0.69999999999999996"/>
+  <default>
+    <default class="/">
+      <motor ctrllimited="true" ctrlrange="-1 1"/>
+      <default class="body">
+        <joint type="hinge" limited="true" solimplimit="0 0.98999999999999999 0.01" stiffness="1" armature="0.01" damping="0.20000000000000001"/>
+        <geom type="capsule" condim="1" group="1" material="body" friction="0.69999999999999996" solref="0.014999999999999999 1" solimp="0.90000000000000002 0.98999999999999999 0.0030000000000000001"/>
+        <default class="thigh">
+          <geom size="0.059999999999999998"/>
+        </default>
+        <default class="shin">
+          <geom size="0.049000000000000002" fromto="0 0 0 0 0 -0.29999999999999999"/>
+        </default>
+        <default class="foot">
+          <geom size="0.027"/>
+          <default class="foot1">
+            <geom fromto="-0.070000000000000007 -0.01 0 0.14000000000000001 -0.029999999999999999 0"/>
+          </default>
+          <default class="foot2">
+            <geom fromto="-0.070000000000000007 0.01 0 0.14000000000000001 0.029999999999999999 0"/>
+          </default>
+        </default>
+        <default class="arm_upper">
+          <geom size="0.040000000000000001"/>
+        </default>
+        <default class="arm_lower">
+          <geom size="0.031"/>
+        </default>
+        <default class="hand">
+          <geom type="sphere" size="0.040000000000000001"/>
+        </default>
+        <default class="joint_big">
+          <joint stiffness="10" damping="5"/>
+          <default class="hip_x">
+            <joint range="-30 10"/>
+          </default>
+          <default class="hip_z">
+            <joint range="-60 35"/>
+          </default>
+          <default class="hip_y">
+            <joint axis="0 1 0" range="-150 20"/>
+          </default>
+          <default class="joint_big_stiff">
+            <joint stiffness="20"/>
+          </default>
+        </default>
+        <default class="knee">
+          <joint pos="0 0 0.02" axis="0 -1 0" range="-160 2"/>
+        </default>
+        <default class="ankle">
+          <joint range="-50 50"/>
+          <default class="ankle_y">
+            <joint pos="0 0 0.080000000000000002" axis="0 1 0" stiffness="6"/>
+          </default>
+          <default class="ankle_x">
+            <joint pos="0 0 0.040000000000000001" stiffness="3"/>
+          </default>
+        </default>
+        <default class="shoulder">
+          <joint range="-85 60"/>
+        </default>
+        <default class="elbow">
+          <joint stiffness="0" range="-100 50"/>
+        </default>
+      </default>
+    </default>
+    <default class="Humanoid/">
+      <motor ctrllimited="true" ctrlrange="-1 1"/>
+      <default class="Humanoid/body">
+        <joint type="hinge" limited="true" solimplimit="0 0.98999999999999999 0.01" stiffness="1" armature="0.01" damping="0.20000000000000001"/>
+        <geom type="capsule" condim="1" group="1" material="Humanoid/body" friction="0.69999999999999996" solref="0.014999999999999999 1" solimp="0.90000000000000002 0.98999999999999999 0.0030000000000000001"/>
+        <default class="Humanoid/thigh">
+          <geom size="0.059999999999999998"/>
+        </default>
+        <default class="Humanoid/shin">
+          <geom size="0.049000000000000002" fromto="0 0 0 0 0 -0.29999999999999999"/>
+        </default>
+        <default class="Humanoid/foot">
+          <geom size="0.027"/>
+          <default class="Humanoid/foot1">
+            <geom fromto="-0.070000000000000007 -0.01 0 0.14000000000000001 -0.029999999999999999 0"/>
+          </default>
+          <default class="Humanoid/foot2">
+            <geom fromto="-0.070000000000000007 0.01 0 0.14000000000000001 0.029999999999999999 0"/>
+          </default>
+        </default>
+        <default class="Humanoid/arm_upper">
+          <geom size="0.040000000000000001"/>
+        </default>
+        <default class="Humanoid/arm_lower">
+          <geom size="0.031"/>
+        </default>
+        <default class="Humanoid/hand">
+          <geom type="sphere" size="0.040000000000000001"/>
+        </default>
+        <default class="Humanoid/joint_big">
+          <joint stiffness="10" damping="5"/>
+          <default class="Humanoid/hip_x">
+            <joint range="-30 10"/>
+          </default>
+          <default class="Humanoid/hip_z">
+            <joint range="-60 35"/>
+          </default>
+          <default class="Humanoid/hip_y">
+            <joint axis="0 1 0" range="-150 20"/>
+          </default>
+          <default class="Humanoid/joint_big_stiff">
+            <joint stiffness="20"/>
+          </default>
+        </default>
+        <default class="Humanoid/knee">
+          <joint pos="0 0 0.02" axis="0 -1 0" range="-160 2"/>
+        </default>
+        <default class="Humanoid/ankle">
+          <joint range="-50 50"/>
+          <default class="Humanoid/ankle_y">
+            <joint pos="0 0 0.080000000000000002" axis="0 1 0" stiffness="6"/>
+          </default>
+          <default class="Humanoid/ankle_x">
+            <joint pos="0 0 0.040000000000000001" stiffness="3"/>
+          </default>
+        </default>
+        <default class="Humanoid/shoulder">
+          <joint range="-85 60"/>
+        </default>
+        <default class="Humanoid/elbow">
+          <joint stiffness="0" range="-100 50"/>
+        </default>
+      </default>
+    </default>
+  </default>
+  <asset>
+    <texture name="//unnamed_texture_0" type="skybox" builtin="gradient" rgb1="0.29999999999999999 0.5 0.69999999999999996" rgb2="0 0 0" width="32" height="512"/>
+    <texture name="body" type="cube" builtin="flat" rgb1="0.80000000000000004 0.59999999999999998 0.40000000000000002" rgb2="0.80000000000000004 0.59999999999999998 0.40000000000000002" mark="cross" markrgb="1 1 1" width="128" height="128"/>
+    <material name="body" class="/" texture="body" texuniform="true" rgba="0.80000000000000004 0.59999999999999998 0.40000000000000002 1"/>
+    <texture name="grid" type="2d" builtin="checker" rgb1="0.10000000000000001 0.20000000000000001 0.29999999999999999" rgb2="0.20000000000000001 0.29999999999999999 0.40000000000000002" width="512" height="512"/>
+    <material name="grid" class="/" texture="grid" texrepeat="1 1" texuniform="true" reflectance="0.20000000000000001"/>
+    <texture name="Humanoid//unnamed_texture_0" type="skybox" builtin="gradient" rgb1="0.29999999999999999 0.5 0.69999999999999996" rgb2="0 0 0" width="32" height="512"/>
+    <texture name="Humanoid/body" type="cube" builtin="flat" rgb1="0.80000000000000004 0.59999999999999998 0.40000000000000002" rgb2="0.80000000000000004 0.59999999999999998 0.40000000000000002" mark="cross" markrgb="1 1 1" width="128" height="128"/>
+    <material name="Humanoid/body" class="Humanoid/" texture="Humanoid/body" texuniform="true" rgba="0.80000000000000004 0.59999999999999998 0.40000000000000002 1"/>
+    <texture name="Humanoid/grid" type="2d" builtin="checker" rgb1="0.10000000000000001 0.20000000000000001 0.29999999999999999" rgb2="0.20000000000000001 0.29999999999999999 0.40000000000000002" width="512" height="512"/>
+    <material name="Humanoid/grid" class="Humanoid/" texture="Humanoid/grid" texrepeat="1 1" texuniform="true" reflectance="0.20000000000000001"/>
+  </asset>
+  <worldbody>
+    <geom name="floor" class="/" type="plane" condim="3" size="0 0 0.050000000000000003" material="grid"/>
+    <light name="spotlight" class="/" mode="targetbodycom" target="torso" pos="0 -6 4" cutoff="30" diffuse="0.80000000000000004 0.80000000000000004 0.80000000000000004" specular="0.29999999999999999 0.29999999999999999 0.29999999999999999"/>
+    <light name="top" class="/" mode="trackcom" pos="0 0 2"/>
+    <body name="torso" childclass="body" pos="0 0 1.282">
+      <camera name="back" mode="trackcom" pos="-3 0 1" xyaxes="0 -1 0 1 0 2"/>
+      <camera name="side" mode="trackcom" pos="0 -3 1" xyaxes="1 0 0 0 1 2"/>
+      <freejoint name="root"/>
+      <geom name="torso" size="0.070000000000000007" fromto="0 -0.070000000000000007 0 0 0.070000000000000007 0"/>
+      <geom name="waist_upper" size="0.059999999999999998" fromto="-0.01 -0.059999999999999998 -0.12 -0.01 0.059999999999999998 -0.12"/>
+      <body name="head" pos="0 0 0.19">
+        <geom name="head" type="sphere" size="0.089999999999999997"/>
+        <camera name="egocentric" fovy="80" pos="0.089999999999999997 0 0" xyaxes="0 -1 0 0.10000000000000001 0 1"/>
+      </body>
+      <body name="waist_lower" pos="-0.01 0 -0.26000000000000001">
+        <geom name="waist_lower" size="0.059999999999999998" fromto="0 -0.059999999999999998 0 0 0.059999999999999998 0"/>
+        <joint name="abdomen_z" class="joint_big_stiff" pos="0 0 0.065000000000000002" axis="0 0 1" range="-45 45"/>
+        <joint name="abdomen_y" class="joint_big" pos="0 0 0.065000000000000002" axis="0 1 0" range="-75 30"/>
+        <body name="pelvis" pos="0 0 -0.16500000000000001">
+          <joint name="abdomen_x" class="joint_big" pos="0 0 0.10000000000000001" axis="1 0 0" range="-35 35"/>
+          <geom name="butt" size="0.089999999999999997" fromto="-0.02 -0.070000000000000007 0 -0.02 0.070000000000000007 0"/>
+          <body name="thigh_right" pos="0 -0.10000000000000001 -0.040000000000000001">
+            <joint name="hip_x_right" class="hip_x" axis="1 0 0"/>
+            <joint name="hip_z_right" class="hip_z" axis="0 0 1"/>
+            <joint name="hip_y_right" class="hip_y"/>
+            <geom name="thigh_right" class="thigh" fromto="0 0 0 0 0.01 -0.34000000000000002"/>
+            <body name="shin_right" pos="0 0.01 -0.40000000000000002">
+              <joint name="knee_right" class="knee"/>
+              <geom name="shin_right" class="shin"/>
+              <body name="foot_right" pos="0 0 -0.39000000000000001">
+                <joint name="ankle_y_right" class="ankle_y"/>
+                <joint name="ankle_x_right" class="ankle_x" axis="1 0 0.5"/>
+                <geom name="foot1_right" class="foot1"/>
+                <geom name="foot2_right" class="foot2"/>
+              </body>
+            </body>
+          </body>
+          <body name="thigh_left" pos="0 0.10000000000000001 -0.040000000000000001">
+            <joint name="hip_x_left" class="hip_x" axis="-1 0 0"/>
+            <joint name="hip_z_left" class="hip_z" axis="0 0 -1"/>
+            <joint name="hip_y_left" class="hip_y"/>
+            <geom name="thigh_left" class="thigh" fromto="0 0 0 0 -0.01 -0.34000000000000002"/>
+            <body name="shin_left" pos="0 -0.01 -0.40000000000000002">
+              <joint name="knee_left" class="knee"/>
+              <geom name="shin_left" class="shin" fromto="0 0 0 0 0 -0.29999999999999999"/>
+              <body name="foot_left" pos="0 0 -0.39000000000000001">
+                <joint name="ankle_y_left" class="ankle_y"/>
+                <joint name="ankle_x_left" class="ankle_x" axis="-1 0 -0.5"/>
+                <geom name="foot1_left" class="foot1"/>
+                <geom name="foot2_left" class="foot2"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="upper_arm_right" pos="0 -0.17000000000000001 0.059999999999999998">
+        <joint name="shoulder1_right" class="shoulder" axis="2 1 1"/>
+        <joint name="shoulder2_right" class="shoulder" axis="0 -1 1"/>
+        <geom name="upper_arm_right" class="arm_upper" fromto="0 0 0 0.16 -0.16 -0.16"/>
+        <body name="lower_arm_right" pos="0.17999999999999999 -0.17999999999999999 -0.17999999999999999">
+          <joint name="elbow_right" class="elbow" axis="0 -1 1"/>
+          <geom name="lower_arm_right" class="arm_lower" fromto="0.01 0.01 0.01 0.17000000000000001 0.17000000000000001 0.17000000000000001"/>
+          <body name="hand_right" pos="0.17999999999999999 0.17999999999999999 0.17999999999999999">
+            <geom name="hand_right" class="hand" zaxis="1 1 1"/>
+          </body>
+        </body>
+      </body>
+      <body name="upper_arm_left" pos="0 0.17000000000000001 0.059999999999999998">
+        <joint name="shoulder1_left" class="shoulder" axis="-2 1 -1"/>
+        <joint name="shoulder2_left" class="shoulder" axis="0 -1 -1"/>
+        <geom name="upper_arm_left" class="arm_upper" fromto="0 0 0 0.16 0.16 -0.16"/>
+        <body name="lower_arm_left" pos="0.17999999999999999 0.17999999999999999 -0.17999999999999999">
+          <joint name="elbow_left" class="elbow" axis="0 -1 -1"/>
+          <geom name="lower_arm_left" class="arm_lower" fromto="0.01 -0.01 0.01 0.17000000000000001 -0.17000000000000001 0.17000000000000001"/>
+          <body name="hand_left" pos="0.17999999999999999 -0.17999999999999999 0.17999999999999999">
+            <geom name="hand_left" class="hand" zaxis="1 -1 1"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    <!-- <body name="Humanoid/"> -->
+      <!-- <geom name="Humanoid/floor" class="Humanoid/" type="plane" condim="3" size="0 0 0.050000000000000003" material="Humanoid/grid"/>
+      <light name="Humanoid/spotlight" class="Humanoid/" mode="targetbodycom" target="Humanoid/torso" pos="0 -6 4" cutoff="30" diffuse="0.80000000000000004 0.80000000000000004 0.80000000000000004" specular="0.29999999999999999 0.29999999999999999 0.29999999999999999"/>
+      <light name="Humanoid/top" class="Humanoid/" mode="trackcom" pos="0 0 2"/> -->
+      <body name="Humanoid/torso" childclass="Humanoid/body" pos="1 0 1.282" axisangle="0 0 1 180">
+        <camera name="Humanoid/back" mode="trackcom" pos="-3 0 1" xyaxes="0 -1 0 1 0 2"/>
+        <camera name="Humanoid/side" mode="trackcom" pos="0 -3 1" xyaxes="1 0 0 0 1 2"/>
+        <freejoint name="Humanoid/root"/>
+        <geom name="Humanoid/torso" size="0.070000000000000007" fromto="0 -0.070000000000000007 0 0 0.070000000000000007 0"/>
+        <geom name="Humanoid/waist_upper" size="0.059999999999999998" fromto="-0.01 -0.059999999999999998 -0.12 -0.01 0.059999999999999998 -0.12"/>
+        <body name="Humanoid/head" pos="0 0 0.19">
+          <geom name="Humanoid/head" type="sphere" size="0.089999999999999997"/>
+          <camera name="Humanoid/egocentric" fovy="80" pos="0.089999999999999997 0 0" xyaxes="0 -1 0 0.10000000000000001 0 1"/>
+        </body>
+        <body name="Humanoid/waist_lower" pos="-0.01 0 -0.26000000000000001">
+          <geom name="Humanoid/waist_lower" size="0.059999999999999998" fromto="0 -0.059999999999999998 0 0 0.059999999999999998 0"/>
+          <joint name="Humanoid/abdomen_z" class="Humanoid/joint_big_stiff" pos="0 0 0.065000000000000002" axis="0 0 1" range="-45 45"/>
+          <joint name="Humanoid/abdomen_y" class="Humanoid/joint_big" pos="0 0 0.065000000000000002" axis="0 1 0" range="-75 30"/>
+          <body name="Humanoid/pelvis" pos="0 0 -0.16500000000000001">
+            <joint name="Humanoid/abdomen_x" class="Humanoid/joint_big" pos="0 0 0.10000000000000001" axis="1 0 0" range="-35 35"/>
+            <geom name="Humanoid/butt" size="0.089999999999999997" fromto="-0.02 -0.070000000000000007 0 -0.02 0.070000000000000007 0"/>
+            <body name="Humanoid/thigh_right" pos="0 -0.10000000000000001 -0.040000000000000001">
+              <joint name="Humanoid/hip_x_right" class="Humanoid/hip_x" axis="1 0 0"/>
+              <joint name="Humanoid/hip_z_right" class="Humanoid/hip_z" axis="0 0 1"/>
+              <joint name="Humanoid/hip_y_right" class="Humanoid/hip_y"/>
+              <geom name="Humanoid/thigh_right" class="Humanoid/thigh" fromto="0 0 0 0 0.01 -0.34000000000000002"/>
+              <body name="Humanoid/shin_right" pos="0 0.01 -0.40000000000000002">
+                <joint name="Humanoid/knee_right" class="Humanoid/knee"/>
+                <geom name="Humanoid/shin_right" class="Humanoid/shin"/>
+                <body name="Humanoid/foot_right" pos="0 0 -0.39000000000000001">
+                  <joint name="Humanoid/ankle_y_right" class="Humanoid/ankle_y"/>
+                  <joint name="Humanoid/ankle_x_right" class="Humanoid/ankle_x" axis="1 0 0.5"/>
+                  <geom name="Humanoid/foot1_right" class="Humanoid/foot1"/>
+                  <geom name="Humanoid/foot2_right" class="Humanoid/foot2"/>
+                </body>
+              </body>
+            </body>
+            <body name="Humanoid/thigh_left" pos="0 0.10000000000000001 -0.040000000000000001">
+              <joint name="Humanoid/hip_x_left" class="Humanoid/hip_x" axis="-1 0 0"/>
+              <joint name="Humanoid/hip_z_left" class="Humanoid/hip_z" axis="0 0 -1"/>
+              <joint name="Humanoid/hip_y_left" class="Humanoid/hip_y"/>
+              <geom name="Humanoid/thigh_left" class="Humanoid/thigh" fromto="0 0 0 0 -0.01 -0.34000000000000002"/>
+              <body name="Humanoid/shin_left" pos="0 -0.01 -0.40000000000000002">
+                <joint name="Humanoid/knee_left" class="Humanoid/knee"/>
+                <geom name="Humanoid/shin_left" class="Humanoid/shin" fromto="0 0 0 0 0 -0.29999999999999999"/>
+                <body name="Humanoid/foot_left" pos="0 0 -0.39000000000000001">
+                  <joint name="Humanoid/ankle_y_left" class="Humanoid/ankle_y"/>
+                  <joint name="Humanoid/ankle_x_left" class="Humanoid/ankle_x" axis="-1 0 -0.5"/>
+                  <geom name="Humanoid/foot1_left" class="Humanoid/foot1"/>
+                  <geom name="Humanoid/foot2_left" class="Humanoid/foot2"/>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+        <body name="Humanoid/upper_arm_right" pos="0 -0.17000000000000001 0.059999999999999998">
+          <joint name="Humanoid/shoulder1_right" class="Humanoid/shoulder" axis="2 1 1"/>
+          <joint name="Humanoid/shoulder2_right" class="Humanoid/shoulder" axis="0 -1 1"/>
+          <geom name="Humanoid/upper_arm_right" class="Humanoid/arm_upper" fromto="0 0 0 0.16 -0.16 -0.16"/>
+          <body name="Humanoid/lower_arm_right" pos="0.17999999999999999 -0.17999999999999999 -0.17999999999999999">
+            <joint name="Humanoid/elbow_right" class="Humanoid/elbow" axis="0 -1 1"/>
+            <geom name="Humanoid/lower_arm_right" class="Humanoid/arm_lower" fromto="0.01 0.01 0.01 0.17000000000000001 0.17000000000000001 0.17000000000000001"/>
+            <body name="Humanoid/hand_right" pos="0.17999999999999999 0.17999999999999999 0.17999999999999999">
+              <geom name="Humanoid/hand_right" class="Humanoid/hand" zaxis="1 1 1"/>
+            </body>
+          </body>
+        </body>
+        <body name="Humanoid/upper_arm_left" pos="0 0.17000000000000001 0.059999999999999998">
+          <joint name="Humanoid/shoulder1_left" class="Humanoid/shoulder" axis="-2 1 -1"/>
+          <joint name="Humanoid/shoulder2_left" class="Humanoid/shoulder" axis="0 -1 -1"/>
+          <geom name="Humanoid/upper_arm_left" class="Humanoid/arm_upper" fromto="0 0 0 0.16 0.16 -0.16"/>
+          <body name="Humanoid/lower_arm_left" pos="0.17999999999999999 0.17999999999999999 -0.17999999999999999">
+            <joint name="Humanoid/elbow_left" class="Humanoid/elbow" axis="0 -1 -1"/>
+            <geom name="Humanoid/lower_arm_left" class="Humanoid/arm_lower" fromto="0.01 -0.01 0.01 0.17000000000000001 -0.17000000000000001 0.17000000000000001"/>
+            <body name="Humanoid/hand_left" pos="0.17999999999999999 -0.17999999999999999 0.17999999999999999">
+              <geom name="Humanoid/hand_left" class="Humanoid/hand" zaxis="1 -1 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+    <!-- </body> -->
+  </worldbody>
+  <contact>
+    <exclude name="//unnamed_contact_0" body1="waist_lower" body2="thigh_right"/>
+    <exclude name="//unnamed_contact_1" body1="waist_lower" body2="thigh_left"/>
+    <exclude name="Humanoid//unnamed_contact_0" body1="Humanoid/waist_lower" body2="Humanoid/thigh_right"/>
+    <exclude name="Humanoid//unnamed_contact_1" body1="Humanoid/waist_lower" body2="Humanoid/thigh_left"/>
+  </contact>
+  <tendon>
+    <fixed name="hamstring_right" class="/" limited="true" range="-0.29999999999999999 2">
+      <joint joint="hip_y_right" coef="0.5"/>
+      <joint joint="knee_right" coef="-0.5"/>
+    </fixed>
+    <fixed name="hamstring_left" class="/" limited="true" range="-0.29999999999999999 2">
+      <joint joint="hip_y_left" coef="0.5"/>
+      <joint joint="knee_left" coef="-0.5"/>
+    </fixed>
+    <fixed name="Humanoid/hamstring_right" class="Humanoid/" limited="true" range="-0.29999999999999999 2">
+      <joint joint="Humanoid/hip_y_right" coef="0.5"/>
+      <joint joint="Humanoid/knee_right" coef="-0.5"/>
+    </fixed>
+    <fixed name="Humanoid/hamstring_left" class="Humanoid/" limited="true" range="-0.29999999999999999 2">
+      <joint joint="Humanoid/hip_y_left" coef="0.5"/>
+      <joint joint="Humanoid/knee_left" coef="-0.5"/>
+    </fixed>
+  </tendon>
+  <actuator>
+    <motor name="abdomen_z" class="/" gear="40" joint="abdomen_z"/>
+    <motor name="abdomen_y" class="/" gear="40" joint="abdomen_y"/>
+    <motor name="abdomen_x" class="/" gear="40" joint="abdomen_x"/>
+    <motor name="hip_x_right" class="/" gear="40" joint="hip_x_right"/>
+    <motor name="hip_z_right" class="/" gear="40" joint="hip_z_right"/>
+    <motor name="hip_y_right" class="/" gear="120" joint="hip_y_right"/>
+    <motor name="knee_right" class="/" gear="80" joint="knee_right"/>
+    <motor name="ankle_y_right" class="/" gear="20" joint="ankle_y_right"/>
+    <motor name="ankle_x_right" class="/" gear="20" joint="ankle_x_right"/>
+    <motor name="hip_x_left" class="/" gear="40" joint="hip_x_left"/>
+    <motor name="hip_z_left" class="/" gear="40" joint="hip_z_left"/>
+    <motor name="hip_y_left" class="/" gear="120" joint="hip_y_left"/>
+    <motor name="knee_left" class="/" gear="80" joint="knee_left"/>
+    <motor name="ankle_y_left" class="/" gear="20" joint="ankle_y_left"/>
+    <motor name="ankle_x_left" class="/" gear="20" joint="ankle_x_left"/>
+    <motor name="shoulder1_right" class="/" gear="20" joint="shoulder1_right"/>
+    <motor name="shoulder2_right" class="/" gear="20" joint="shoulder2_right"/>
+    <motor name="elbow_right" class="/" gear="40" joint="elbow_right"/>
+    <motor name="shoulder1_left" class="/" gear="20" joint="shoulder1_left"/>
+    <motor name="shoulder2_left" class="/" gear="20" joint="shoulder2_left"/>
+    <motor name="elbow_left" class="/" gear="40" joint="elbow_left"/>
+    <motor name="Humanoid/abdomen_z" class="Humanoid/" gear="40" joint="Humanoid/abdomen_z"/>
+    <motor name="Humanoid/abdomen_y" class="Humanoid/" gear="40" joint="Humanoid/abdomen_y"/>
+    <motor name="Humanoid/abdomen_x" class="Humanoid/" gear="40" joint="Humanoid/abdomen_x"/>
+    <motor name="Humanoid/hip_x_right" class="Humanoid/" gear="40" joint="Humanoid/hip_x_right"/>
+    <motor name="Humanoid/hip_z_right" class="Humanoid/" gear="40" joint="Humanoid/hip_z_right"/>
+    <motor name="Humanoid/hip_y_right" class="Humanoid/" gear="120" joint="Humanoid/hip_y_right"/>
+    <motor name="Humanoid/knee_right" class="Humanoid/" gear="80" joint="Humanoid/knee_right"/>
+    <motor name="Humanoid/ankle_y_right" class="Humanoid/" gear="20" joint="Humanoid/ankle_y_right"/>
+    <motor name="Humanoid/ankle_x_right" class="Humanoid/" gear="20" joint="Humanoid/ankle_x_right"/>
+    <motor name="Humanoid/hip_x_left" class="Humanoid/" gear="40" joint="Humanoid/hip_x_left"/>
+    <motor name="Humanoid/hip_z_left" class="Humanoid/" gear="40" joint="Humanoid/hip_z_left"/>
+    <motor name="Humanoid/hip_y_left" class="Humanoid/" gear="120" joint="Humanoid/hip_y_left"/>
+    <motor name="Humanoid/knee_left" class="Humanoid/" gear="80" joint="Humanoid/knee_left"/>
+    <motor name="Humanoid/ankle_y_left" class="Humanoid/" gear="20" joint="Humanoid/ankle_y_left"/>
+    <motor name="Humanoid/ankle_x_left" class="Humanoid/" gear="20" joint="Humanoid/ankle_x_left"/>
+    <motor name="Humanoid/shoulder1_right" class="Humanoid/" gear="20" joint="Humanoid/shoulder1_right"/>
+    <motor name="Humanoid/shoulder2_right" class="Humanoid/" gear="20" joint="Humanoid/shoulder2_right"/>
+    <motor name="Humanoid/elbow_right" class="Humanoid/" gear="40" joint="Humanoid/elbow_right"/>
+    <motor name="Humanoid/shoulder1_left" class="Humanoid/" gear="20" joint="Humanoid/shoulder1_left"/>
+    <motor name="Humanoid/shoulder2_left" class="Humanoid/" gear="20" joint="Humanoid/shoulder2_left"/>
+    <motor name="Humanoid/elbow_left" class="Humanoid/" gear="40" joint="Humanoid/elbow_left"/>
+  </actuator>
+  <!-- <keyframe>
+    <key name="squat" qpos="0 0 0.59599999999999997 0.98801499999999998 0 0.154359 0 0 0.40000000000000002 0 -0.25 -0.5 -2.5 -2.6499999999999999 -0.80000000000000004 0.56000000000000005 -0.25 -0.5 -2.5 -2.6499999999999999 -0.80000000000000004 0.56000000000000005 0 0 0 0 0 0"/>
+    <key name="stand_on_left_leg" qpos="0 0 1.2194799999999999 0.97158800000000001 -0.17997299999999999 0.13531799999999999 -0.072907600000000003 -0.0516 -0.20200000000000001 0.23000000000000001 -0.23999999999999999 -0.0070000000000000001 -0.34000000000000002 -1.76 -0.46600000000000003 -0.041500000000000002 -0.080000000000000002 -0.01 -0.37 -0.68500000000000005 -0.34999999999999998 -0.089999999999999997 0.109 -0.067000000000000004 -0.69999999999999996 -0.050000000000000003 0.12 0.16"/>
+    <key name="prone" qpos="0.40000000000000002 0 0.075770599999999994 0.73250000000000004 0 0.68076700000000001 0 0 0.072900000000000006 0 0.0077000000000000002 0.0019 -0.025999999999999999 -0.35099999999999998 -0.27000000000000002 0 0.0077000000000000002 0.0019 -0.025999999999999999 -0.35099999999999998 -0.27000000000000002 0 0.56000000000000005 -0.62 -1.752 0.56000000000000005 -0.62 -1.752"/>
+    <key name="supine" qpos="-0.40000000000000002 0 0.081220000000000001 0.72278799999999999 0 -0.69106999999999996 0 0 -0.25 0 0.018200000000000001 0.014200000000000001 0.29999999999999999 0.042000000000000003 -0.44 -0.02 0.018200000000000001 0.014200000000000001 0.29999999999999999 0.042000000000000003 -0.44 -0.02 0.186 -0.72999999999999998 -1.73 0.186 -0.72999999999999998 -1.73"/>
+    <key name="Humanoid/squat" qpos="0 0 0.59599999999999997 0.98801499999999998 0 0.154359 0 0 0.40000000000000002 0 -0.25 -0.5 -2.5 -2.6499999999999999 -0.80000000000000004 0.56000000000000005 -0.25 -0.5 -2.5 -2.6499999999999999 -0.80000000000000004 0.56000000000000005 0 0 0 0 0 0"/>
+    <key name="Humanoid/stand_on_left_leg" qpos="0 0 1.2194799999999999 0.97158800000000001 -0.17997299999999999 0.13531799999999999 -0.072907600000000003 -0.0516 -0.20200000000000001 0.23000000000000001 -0.23999999999999999 -0.0070000000000000001 -0.34000000000000002 -1.76 -0.46600000000000003 -0.041500000000000002 -0.080000000000000002 -0.01 -0.37 -0.68500000000000005 -0.34999999999999998 -0.089999999999999997 0.109 -0.067000000000000004 -0.69999999999999996 -0.050000000000000003 0.12 0.16"/>
+    <key name="Humanoid/prone" qpos="0.40000000000000002 0 0.075770599999999994 0.73250000000000004 0 0.68076700000000001 0 0 0.072900000000000006 0 0.0077000000000000002 0.0019 -0.025999999999999999 -0.35099999999999998 -0.27000000000000002 0 0.0077000000000000002 0.0019 -0.025999999999999999 -0.35099999999999998 -0.27000000000000002 0 0.56000000000000005 -0.62 -1.752 0.56000000000000005 -0.62 -1.752"/>
+    <key name="Humanoid/supine" qpos="-0.40000000000000002 0 0.081220000000000001 0.72278799999999999 0 -0.69106999999999996 0 0 -0.25 0 0.018200000000000001 0.014200000000000001 0.29999999999999999 0.042000000000000003 -0.44 -0.02 0.018200000000000001 0.014200000000000001 0.29999999999999999 0.042000000000000003 -0.44 -0.02 0.186 -0.72999999999999998 -1.73 0.186 -0.72999999999999998 -1.73"/>
+  </keyframe> -->
+</mujoco>
